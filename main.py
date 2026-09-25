@@ -13,10 +13,10 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
 
         #TODO 1
-        if self.path =="_________":
-            self.send(_____, events)
+        if self.path =="/events":
+            self.send(200, events)
         else:
-            self.send(_____, {"error": "not found"})
+            self.send(404, {"error": "not found"})
 
     def _send(self, status, body):
         payload = json.dumps(body).encode()
